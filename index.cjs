@@ -3,7 +3,7 @@ const cors=require('cors')
 const dotenv=require('dotenv')
 const path = require('path'); 
 dotenv.config({path:'./.env'})
-app.options("*", cors());
+
 
 const app=express()
 app.use(cors({
@@ -11,6 +11,7 @@ app.use(cors({
   methods: ['GET','POST','PUT','DELETE'],
 }));
 //app.use(cors())
+app.options("*", cors());
 app.use(express.json())
 
 app.use("/uploads", express.static(path.join(__dirname, "uploads")));
