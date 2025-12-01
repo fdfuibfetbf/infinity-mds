@@ -7,11 +7,11 @@ dotenv.config({path:'./.env'})
 
 const app=express()
 app.use(cors({
-  origin: '*', // ya 'https://your-hostinger-domain.com'
+  origin: 'https://infinitymedical.co', // ya 'https://your-hostinger-domain.com'
   methods: ['GET','POST','PUT','DELETE'],
 }));
 //app.use(cors())
-app.options("*", cors());
+
 app.use(express.json())
 
 app.use("/uploads", express.static(path.join(__dirname, "uploads")));
