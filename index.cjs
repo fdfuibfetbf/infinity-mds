@@ -3,6 +3,7 @@ const cors=require('cors')
 const dotenv=require('dotenv')
 const path = require('path'); 
 dotenv.config({path:'./.env'})
+app.options("*", cors());
 
 const app=express()
 app.use(cors({
