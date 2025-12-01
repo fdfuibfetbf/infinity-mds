@@ -1,0 +1,42 @@
+/* Tailwind directives at the top */
+@import "tailwindcss";
+
+
+/* Custom styles below */
+body{
+    padding: 0px;
+    margin: 0px;
+    overflow-x: hidden;
+}
+
+
+@keyframes slideNext {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes slidePrev {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+.animate-slideNext {
+  animation: slideNext 0.7s ease-in-out;
+}
+
+.animate-slidePrev {
+  animation: slidePrev 0.7s ease-in-out;
+}
+
